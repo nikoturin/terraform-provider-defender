@@ -4,7 +4,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 
-	"terraform-provider-defender/defender"
+	"github.com/nikoturin/terraform-provider-defender/defender"
 )
 
 // Generate the Terraform provider documentation using `tfplugindocs`: 

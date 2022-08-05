@@ -1,4 +1,4 @@
-module terraform-provider-defender
+module github.com/nikoturin/terraform-provider-defender
 
 go 1.18
 

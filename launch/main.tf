@@ -1,17 +1,20 @@
+terraform {   
+	required_providers {     
+		defender = {       
+		   version = "0.2.4"
+		   source = "nikoturin/defender"
+	}   
+    } 
 
-provider "defender" {
-	
-	api_version = "v1"
-	hostname = "localhost"
+}  
 
+
+provider "defender" {}
+
+module "relay" { 
+	source = "./summary"
 }
+output "relay"{
 
-module "psl" {
-  source = "./summary"
-
-  summary_name = "Packer Spiced Latte"
-}
-
-output "psl" {
-  value = module.psl.summary
+	value = module.relay.summary
 }
