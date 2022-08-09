@@ -1,20 +1,31 @@
-terraform {   
-	required_providers {     
-		defender = {       
-		   version = "0.2.4"
-		   source = "nikoturin/defender"
-	}   
-    } 
-
-}  
-
+terraform {         
+	required_providers {                 
+		defender = {                    
+				source = "nikoturin/defender"
+				version = ">=0.2.5"
+		}
+	}  
+}
 
 provider "defender" {}
 
-module "relay" { 
-	source = "./summary"
+variable "summary_name" {
+  type    = string
+  default = "Vagrante espresso"
 }
-output "relay"{
 
-	value = module.relay.summary
+data "defender_summary" "all" {}
+
+# Returns all relays
+output "all_summary" {
+  value = data.defender_summary.all.summary
+}
+
+# Only returns packer spiced latte
+output "summar" {
+  value = {
+    for summar in data.defender_summary.all.summary :
+    summar.relayerId => summary
+    if summar.name == var.summar_name
+  }
 }

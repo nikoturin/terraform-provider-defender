@@ -10,7 +10,7 @@ func Provider() *schema.Provider {
 		ResourcesMap: map[string]*schema.Resource{},
 		DataSourcesMap: map[string]*schema.Resource{
 
-			"nikoturin_defender": dataSourceDefender(),
+			"defender_summary": dataSourceDefender(),
 		},
 	}
 }
