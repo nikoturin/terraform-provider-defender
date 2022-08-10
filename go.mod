@@ -1,11 +1,10 @@
-module nikoturin/terraform-provider-defender/defender
+module terraform-provider-defender
 
 go 1.18
 
 require (
 	github.com/hashicorp/terraform-plugin-docs v0.13.0
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.20.0
-	github.com/nikoturin/terraform-provider-defender v0.2.8
 )
 
 require (
