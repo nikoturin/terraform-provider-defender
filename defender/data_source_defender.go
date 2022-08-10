@@ -21,7 +21,7 @@ func dataSourceDefender() *schema.Resource {
 				Computed: true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"relayerId": &schema.Schema{
+						"relayer_id": &schema.Schema{
 							Type:     schema.TypeString,
 							Computed: true,
 						},
@@ -37,7 +37,7 @@ func dataSourceDefender() *schema.Resource {
 							Type:     schema.TypeString,
 							Computed: true,
 						},
-						"createAt": &schema.Schema{
+						"create_at": &schema.Schema{
 							Type:     schema.TypeInt,
 							Computed: true,
 						},
