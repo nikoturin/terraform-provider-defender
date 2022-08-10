@@ -45,27 +45,6 @@ func dataSourceDefender() *schema.Resource {
 							Type:     schema.TypeString,
 							Computed: true,
 						},
-						/*"policies": &schema.Schema{
-							Type:     schema.TypeList,
-							Computed: true,
-							Elem: &schema.Resource{
-								Schema: map[string]*schema.Schema{
-									"ingredient_id": &schema.Schema{
-										Type:     schema.TypeInt,
-										Computed: true,
-									},
-								},
-							},
-						},*/
-
-						"minBalance": &schema.Schema{
-							Type:     schema.TypeString,
-							Computed: true,
-						},
-						"pendingTxCost": &schema.Schema{
-							Type:     schema.TypeString,
-							Computed: true,
-						},
 					},
 				},
 			},

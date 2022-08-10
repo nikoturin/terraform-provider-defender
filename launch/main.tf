@@ -22,10 +22,10 @@ output "all_summary" {
 }
 
 # Only returns packer spiced latte
-output "summar" {
+output "summary" {
   value = {
-    for summar in data.defender_summary.all.summary :
-    summar.relayerId => summary
-    if summar.name == var.summar_name
+    for summary in data.defender_summary.all.summary :
+    summary.relayerId => summary
+    if summary.name == var.summary_name
   }
 }
