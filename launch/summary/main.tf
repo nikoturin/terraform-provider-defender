@@ -1,8 +1,8 @@
 terraform {         
 	required_providers {                 
 		defender = {                    
-				version = "0.2.5"                    
-				source = "nikoturin/defender"         
+				version = "0.2"
+				source = "github.com/def/defender"         
 		}     
 	}  
 }
@@ -12,7 +12,7 @@ provider "defender" {}
 
 variable "summary_name" {
   type    = string
-  default = "Vagrante espresso"
+  default = "Missing a lot actions but, it is the initial code :)"
 }
 
 data "defender_summary" "all" {}
@@ -22,7 +22,7 @@ output "all_summary" {
   value = data.defender_summary.all.summary
 }
 
-# Only returns packer spiced latte
+# Only return relays created before
 output "summary" {
   value = {
     for summary in data.defender_summary.all.summary :
