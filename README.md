@@ -1,3 +1,7 @@
+OpenZeppeling:
+
+Proof of Concept Terraform - Defender
+
 tag: 0.2.11
 
 Steps to start the project Terraform - Defender
@@ -35,5 +39,9 @@ To create Token I share yout the repository oz-aws from blockdemy:https://github
 I know is missing some actions from defender, but it's good to start to make some practice devops across Terraform - Defender
 
 I'll continue working with source code to add all actions defender.
+
+If you want to test actions using CLI with curl, just to make sure endPoint working well I share curl action:
+
+time curl -X GET -H 'Accept: application/json' -H 'Content-Type: application/json' -H "X-Api-Key: $DEFENDER_APIKEY" -H "Authorization: $DEFENDER_TOKEN" "https://defender-api.openzeppelin.com/relayer/relayers/summary"
 
 :) I hope you can run it
